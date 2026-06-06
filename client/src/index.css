@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #6C5DD3;
+  --color-secondary: #7BCBCF;
+  --color-accent: #FF8A65;
+  --color-background: #F7F7FB;
+  --color-dark: #1F2128;
+  --color-gray-light: #E4E4E4;
+  --font-sans: "Poppins", "Inter", sans-serif;
+  --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-dark font-sans;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-soft rounded-2xl;
+  }
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-2 rounded-xl shadow-soft hover:bg-primary/90 transition-all font-medium;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-2 rounded-xl shadow-soft hover:bg-secondary/90 transition-all font-medium;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all bg-white/50;
+  }
+}

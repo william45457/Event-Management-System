@@ -1,0 +1,28 @@
+# Node dependencies
+node_modules/
+
+# Build outputs
+client/dist/
+server/dist/
+
+# Environment files
+*.env
+
+# Uploads and storage
+uploads/
+client/public/uploads/
+.data/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+logs/
+
+# Editor files
+.vscode/
+.idea/
+.DS_Store
+
+# OS files
+Thumbs.db
